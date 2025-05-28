@@ -5,25 +5,16 @@
                [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Módulos</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="">Inicio</a>
-      <a mat-list-item routerLink="/programming">Sistemas Informáticos</a>
-      <a mat-list-item routerLink="/programming">Bases de Datos</a>
-      <a mat-list-item routerLink="/programming">Programación</a>
-      <a mat-list-item routerLink="/programming">Lenguajes de Marcas y Sistemas de Gestión de Información</a>
-      <a mat-list-item routerLink="/programming">Entornos de Desarrollo</a>
-      <a mat-list-item routerLink="/programming">Formación y Orientación Laboral</a>
-      <a mat-list-item routerLink="/programming">Desarrollo Web en Entorno Cliente</a>
-      <a mat-list-item routerLink="/programming">Desarrollo Web en Entorno Servidor</a>
-      <a mat-list-item routerLink="/programming">Despliegue de Aplicaciones Web</a>
-      <a mat-list-item routerLink="/programming">Diseño de Interfaces Web</a>
-      <a mat-list-item routerLink="/programming">Empresa e Iniciativa Emprendedora</a>
-      <a mat-list-item routerLink="/programming">Proyecto de Desarrollo de Aplicaciones Web</a>
-      <a mat-list-item routerLink="/programming">Formación en Centros de Trabajo</a>
+      <!-- Menú principal -->
+      @for (module of mainModules; track module.path) {
+        <a mat-list-item [routerLink]="module.path">{{ module.title }}</a>
+      }
 
-      <!-- Menú específico para programación -->
-      @if (isProgrammingRoute) {
-        <div class="programming-submenu">
-          @for (lesson of programmingLessons; track lesson.path) {
+      <!-- Menú específico para la ruta actual -->
+      @if (hasSpecificMenu()) {
+        <div class="module-submenu">
+          <mat-toolbar class="submenu-header">Unidades de {{ getModuleTitle() }}</mat-toolbar>
+          @for (lesson of getCurrentLessons(); track lesson.path) {
             <a mat-list-item [routerLink]="lesson.path">{{ lesson.title }}</a>
           }
         </div>
@@ -44,5 +35,6 @@
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet />
+
   </mat-sidenav-content>
 </mat-sidenav-container>
