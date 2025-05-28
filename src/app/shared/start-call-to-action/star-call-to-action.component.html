@@ -1,0 +1,44 @@
+<div class="github-cta">
+  <div class="star-container floating">
+    <div class="star">★</div>
+    <div class="star-rays"></div>
+  </div>
+  <h2 class="github-cta-title">¡Lleva el DAW contigo!</h2>
+  <p class="github-cta-subtitle">
+    Descarga esta aplicación y accede a todo el contenido incluso sin conexión.
+  </p>
+
+  <div class="github-steps">
+    <h4>Cómo obtener tu copia:</h4>
+    <ol>
+      <li>Haz un <code>fork</code> del repositorio para crear tu propia copia.</li>
+      <li>Clona el repositorio en tu ordenador:
+        <code>git clone {{repoUrl}}.git</code>
+      </li>
+      <li>Instala las dependencias: <code>npm install</code></li>
+      <li>Ejecuta la aplicación: <code>npm start</code></li>
+      <li>
+        ¡No olvides marcar el repositorio con una ⭐ para ayudar a otros estudiantes!
+      </li>
+    </ol>
+  </div>
+
+  <div class="github-cta-buttons">
+    <a [href]="repoUrl + '/fork'" target="_blank" class="github-btn fork-btn">
+      <i class="fas fa-code-branch"></i> Fork
+    </a>
+    <a [href]="repoUrl" target="_blank" class="github-btn clone-btn">
+      <i class="fas fa-download"></i> Clonar
+    </a>
+    <a [href]="repoUrl + '/stargazers'" target="_blank" class="github-btn star-btn">
+      <i class="fas fa-star"></i> ¡Dale una estrella!
+    </a>
+  </div>
+
+  <p style="margin-top: 20px; font-size: 0.9rem;">
+    ¿Encontraste un error o quieres contribuir?
+    <a [href]="repoUrl + '/issues'" style="color: white; text-decoration: underline;" target="_blank">
+      Revisa las issues
+    </a>
+  </p>
+</div>

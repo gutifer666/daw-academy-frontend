@@ -1,0 +1,144 @@
+/* GitHub Call to Action Styles */
+.github-cta {
+  background: linear-gradient(135deg, #2a3f5f 0%, #1e3a8a 100%);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.github-cta-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.github-cta-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.github-steps {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.github-steps h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.github-steps ol {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.github-steps li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.github-steps code {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.github-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.fork-btn {
+  background-color: #2ea44f;
+}
+
+.clone-btn {
+  background-color: #4078c0;
+}
+
+.star-btn {
+  background-color: #e3b341;
+}
+
+.github-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.github-btn i {
+  margin-right: 8px;
+}
+
+/* Star Animation Styles */
+.star-container {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.star {
+  font-size: 2.5rem;
+  color: #ffdd57;
+  text-align: center;
+  line-height: 50px;
+  text-shadow: 0 0 10px rgba(255, 221, 87, 0.7);
+}
+
+.star-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 221, 87, 0.8), rgba(255, 221, 87, 0));
+  transform-origin: left center;
+}
+
+@keyframes star-pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
