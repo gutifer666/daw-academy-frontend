@@ -27,7 +27,6 @@ export const routes: Routes = [
   { path: 'computer-systems/ut7', component: IFrameComponent },
   { path: 'computer-systems/ut8', component: IFrameComponent },
   { path: 'computer-systems/ut9', component: IFrameComponent },
-  { path: 'computer-systems/ut10', component: IFrameComponent },
 
   { path: 'databases', component: ProgrammingComponent},
   { path: 'databases/ut1', component: IFrameComponent },
@@ -37,9 +36,6 @@ export const routes: Routes = [
   { path: 'databases/ut5', component: IFrameComponent },
   { path: 'databases/ut6', component: IFrameComponent },
   { path: 'databases/ut7', component: IFrameComponent },
-  { path: 'databases/ut8', component: IFrameComponent },
-  { path: 'databases/ut9', component: IFrameComponent },
-  { path: 'databases/ut10', component: IFrameComponent },
 
   { path: 'markup-languages', component: ProgrammingComponent},
   { path: 'markup-languages/ut1', component: IFrameComponent },
@@ -48,10 +44,6 @@ export const routes: Routes = [
   { path: 'markup-languages/ut4', component: IFrameComponent },
   { path: 'markup-languages/ut5', component: IFrameComponent },
   { path: 'markup-languages/ut6', component: IFrameComponent },
-  { path: 'markup-languages/ut7', component: IFrameComponent },
-  { path: 'markup-languages/ut8', component: IFrameComponent },
-  { path: 'markup-languages/ut9', component: IFrameComponent },
-  { path: 'markup-languages/ut10', component: IFrameComponent },
 
   { path: 'development-environments', component: ProgrammingComponent},
   { path: 'development-environments/ut1', component: IFrameComponent },
@@ -59,11 +51,6 @@ export const routes: Routes = [
   { path: 'development-environments/ut3', component: IFrameComponent },
   { path: 'development-environments/ut4', component: IFrameComponent },
   { path: 'development-environments/ut5', component: IFrameComponent },
-  { path: 'development-environments/ut6', component: IFrameComponent },
-  { path: 'development-environments/ut7', component: IFrameComponent },
-  { path: 'development-environments/ut8', component: IFrameComponent },
-  { path: 'development-environments/ut9', component: IFrameComponent },
-  { path: 'development-environments/ut10', component: IFrameComponent },
 
   { path: 'training-and-job-guidance', component: ProgrammingComponent},
   { path: 'training-and-job-guidance/ut1', component: IFrameComponent },
@@ -74,8 +61,6 @@ export const routes: Routes = [
   { path: 'training-and-job-guidance/ut6', component: IFrameComponent },
   { path: 'training-and-job-guidance/ut7', component: IFrameComponent },
   { path: 'training-and-job-guidance/ut8', component: IFrameComponent },
-  { path: 'training-and-job-guidance/ut9', component: IFrameComponent },
-  { path: 'training-and-job-guidance/ut10', component: IFrameComponent },
 
   { path: 'client-side-web-development', component: ProgrammingComponent},
   { path: 'client-side-web-development/ut1', component: IFrameComponent },
@@ -84,10 +69,6 @@ export const routes: Routes = [
   { path: 'client-side-web-development/ut4', component: IFrameComponent },
   { path: 'client-side-web-development/ut5', component: IFrameComponent },
   { path: 'client-side-web-development/ut6', component: IFrameComponent },
-  { path: 'client-side-web-development/ut7', component: IFrameComponent },
-  { path: 'client-side-web-development/ut8', component: IFrameComponent },
-  { path: 'client-side-web-development/ut9', component: IFrameComponent },
-  { path: 'client-side-web-development/ut10', component: IFrameComponent },
 
   { path: 'client-side-web-server', component: ProgrammingComponent},
   { path: 'client-side-web-server/ut1', component: IFrameComponent },
@@ -97,9 +78,6 @@ export const routes: Routes = [
   { path: 'client-side-web-server/ut5', component: IFrameComponent },
   { path: 'client-side-web-server/ut6', component: IFrameComponent },
   { path: 'client-side-web-server/ut7', component: IFrameComponent },
-  { path: 'client-side-web-server/ut8', component: IFrameComponent },
-  { path: 'client-side-web-server/ut9', component: IFrameComponent },
-  { path: 'client-side-web-server/ut10', component: IFrameComponent },
 
   { path: 'web-application-deployment', component: ProgrammingComponent},
   { path: 'web-application-deployment/ut1', component: IFrameComponent },
