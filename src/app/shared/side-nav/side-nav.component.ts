@@ -134,7 +134,40 @@ export class SideNavComponent implements OnInit {
       { path: '/client-side-web-server/ut6', title: 'UT06.- Servicios web' },
       { path: '/client-side-web-server/ut7', title: 'UT07.- Aplicaciones web dinámicas e híbridas' },
     ],
-    // Añadir definiciones para los demás módulos siguiendo el mismo patrón
+    'web-application-deployment': [
+      { path: '/web-application-deployment/ut1', title: 'UT01.- Implantación, configuración y administración de servidores web' },
+      { path: '/web-application-deployment/ut2', title: 'UT02.- Configuración y administración de servidores de aplicaciones' },
+      { path: '/web-application-deployment/ut3', title: 'UT03.- Instalación y administración de servidores de alta disponibilidad.' },
+      { path: '/web-application-deployment/ut4', title: 'UT04.- Servicios de red implicados en el despliegue de una aplicación web' },
+      { path: '/web-application-deployment/ut5', title: 'UT05.- Documentación y control de versiones' },
+    ],
+    'web-interface-design': [
+      { path: '/web-interface-design/ut1', title: 'UT01.- La interfaz web' },
+      { path: '/web-interface-design/ut2', title: 'UT02.- Guías de estilo. Prototipos. Revisión lenguaje de marcas' },
+      { path: '/web-interface-design/ut3', title: 'UT03.- Uso avanzado de hojas de estilo' },
+      { path: '/web-interface-design/ut4', title: 'UT04.- Modelo de cajas. Frameworks' },
+      { path: '/web-interface-design/ut5', title: 'UT05.- Preprocesadores' },
+      { path: '/web-interface-design/ut6', title: 'UT06.- Multimedia' },
+      { path: '/web-interface-design/ut7', title: 'UT07.- Integración de contenido interactivo' },
+      { path: '/web-interface-design/ut8', title: 'UT08.- Accesibilidad web' },
+      { path: '/web-interface-design/ut9', title: 'UT09.- La usabilidad web' },
+      { path: '/web-interface-design/ut10', title: 'UT010.- Librerías para la creación de interfaces' },
+    ],
+    'company-and-entrepreneurial-initiative': [
+      { path: '/company-and-entrepreneurial-initiative/ut1', title: 'UT01.- La interfaz web' },
+      { path: '/company-and-entrepreneurial-initiative/ut2', title: 'UT02.- Guías de estilo. Prototipos. Revisión lenguaje de marcas' },
+      { path: '/company-and-entrepreneurial-initiative/ut3', title: 'UT03.- Uso avanzado de hojas de estilo' },
+      { path: '/company-and-entrepreneurial-initiative/ut4', title: 'UT04.- Modelo de cajas. Frameworks' },
+      { path: '/company-and-entrepreneurial-initiative/ut5', title: 'UT05.- Preprocesadores' },
+      { path: '/company-and-entrepreneurial-initiative/ut6', title: 'UT06.- Multimedia' },
+      { path: '/company-and-entrepreneurial-initiative/ut7', title: 'UT07.- Integración de contenido interactivo' },
+    ],
+    'web-application-development-project': [
+      { path: '/web-application-development-project/ut1', title: 'UT01.- TFG' },
+    ],
+    'training-in-workplaces': [
+      { path: '/training-in-workplaces/ut1', title: 'UT01.- FCT' },
+    ]
   };
 
   ngOnInit() {

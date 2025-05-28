@@ -85,11 +85,6 @@ export const routes: Routes = [
   { path: 'web-application-deployment/ut3', component: IFrameComponent },
   { path: 'web-application-deployment/ut4', component: IFrameComponent },
   { path: 'web-application-deployment/ut5', component: IFrameComponent },
-  { path: 'web-application-deployment/ut6', component: IFrameComponent },
-  { path: 'web-application-deployment/ut7', component: IFrameComponent },
-  { path: 'web-application-deployment/ut8', component: IFrameComponent },
-  { path: 'web-application-deployment/ut9', component: IFrameComponent },
-  { path: 'web-application-deployment/ut10', component: IFrameComponent },
 
   { path: 'web-interface-design', component: ProgrammingComponent},
   { path: 'web-interface-design/ut1', component: IFrameComponent },
@@ -111,32 +106,11 @@ export const routes: Routes = [
   { path: 'company-and-entrepreneurial-initiative/ut5', component: IFrameComponent },
   { path: 'company-and-entrepreneurial-initiative/ut6', component: IFrameComponent },
   { path: 'company-and-entrepreneurial-initiative/ut7', component: IFrameComponent },
-  { path: 'company-and-entrepreneurial-initiative/ut8', component: IFrameComponent },
-  { path: 'company-and-entrepreneurial-initiative/ut9', component: IFrameComponent },
-  { path: 'company-and-entrepreneurial-initiative/ut10', component: IFrameComponent },
 
   { path: 'web-application-development-project', component: ProgrammingComponent},
   { path: 'web-application-development-project/ut1', component: IFrameComponent },
-  { path: 'web-application-development-project/ut2', component: IFrameComponent },
-  { path: 'web-application-development-project/ut3', component: IFrameComponent },
-  { path: 'web-application-development-project/ut4', component: IFrameComponent },
-  { path: 'web-application-development-project/ut5', component: IFrameComponent },
-  { path: 'web-application-development-project/ut6', component: IFrameComponent },
-  { path: 'web-application-development-project/ut7', component: IFrameComponent },
-  { path: 'web-application-development-project/ut8', component: IFrameComponent },
-  { path: 'web-application-development-project/ut9', component: IFrameComponent },
-  { path: 'web-application-development-project/ut10', component: IFrameComponent },
 
   { path: 'training-in-workplaces', component: ProgrammingComponent},
-  { path: 'training-in-workplaces/ut1', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut2', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut3', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut4', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut5', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut6', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut7', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut8', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut9', component: IFrameComponent },
-  { path: 'training-in-workplaces/ut10', component: IFrameComponent }
+  { path: 'training-in-workplaces/ut1', component: IFrameComponent }
 
 ];
