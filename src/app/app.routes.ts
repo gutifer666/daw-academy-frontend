@@ -109,7 +109,7 @@ export const routes: Routes = [
   { path: 'proyecto-daw', component: HomeComponent},
   { path: 'proyecto-daw/ut1', component: IframeContentViewComponent },
 
-  { path: 'formacion-en centros-de-trabajo', component: HomeComponent},
-  { path: 'formacion-en centros-de-trabajo/ut1', component: IframeContentViewComponent }
+  { path: 'formacion-en-centros-de-trabajo', component: HomeComponent},
+  { path: 'formacion-en-centros-de-trabajo/ut1', component: IframeContentViewComponent }
 
 ];

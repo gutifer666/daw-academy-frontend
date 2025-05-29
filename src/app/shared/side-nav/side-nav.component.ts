@@ -55,7 +55,7 @@ export class SideNavComponent implements OnInit {
     { path: '/diseno-de-interfaces-web', title: 'Diseño de Interfaces Web' },
     { path: '/empresa-e-iniciativa-emprendedora', title: 'Empresa e Iniciativa Emprendedora' },
     { path: '/proyecto-daw', title: 'Proyecto de Desarrollo de Aplicaciones Web' },
-    { path: '/formacion-en centros-de-trabajo', title: 'Formación en Centros de Trabajo' }
+    { path: '/formacion-en-centros-de-trabajo', title: 'Formación en Centros de Trabajo' }
   ];
 
   // Definir las lecciones para cada módulo
@@ -165,8 +165,8 @@ export class SideNavComponent implements OnInit {
     'proyecto-daw': [
       { path: '/proyecto-daw/ut1', title: 'UT01.- TFG' },
     ],
-    'formacion-en centros-de-trabajo': [
-      { path: '/formacion-en centros-de-trabajo/ut1', title: 'UT01.- FCT' },
+    'formacion-en-centros-de-trabajo': [
+      { path: '/formacion-en-centros-de-trabajo/ut1', title: 'UT01.- FCT' },
     ]
   };
 
