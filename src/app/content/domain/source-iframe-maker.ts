@@ -44,7 +44,7 @@ export class SourceIframeMaker {
         this.subject === 'desarrollo-web-en-entorno-servidor' ||
         this.subject === 'diseno-de-interfaces-web') {
 
-      return 'DWEC/1. Arquitecturas_y_lenguajes_de_programación_en_clientes_web_JavaScript.pdf';
+      return 'DWEC/1_Arquitecturas_y_lenguajes_de_programacion_en_clientes_web_JavaScript.pdf';
     }
 
     const LMUrls: { [key: string]: string } = {
