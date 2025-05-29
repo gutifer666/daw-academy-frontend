@@ -35,6 +35,18 @@ export class SourceIframeMaker {
       return 'https://gutifer666.github.io/daw-chat/bases-de-datos/ut7/educacionadistancia.juntadeandalucia.es_formacionprofesional_blocks_recopila_recopila.php_id=3997&dopt=1.html';
     }
 
+    if (this.subject === 'despliegue-de-aplicaciones' && this.unit === '5') {
+      return 'https://gutifer666.github.io/daw-chat/despliegue-de-aplicaciones/ut5/educacionadistancia.juntadeandalucia.es_formacionprofesional_blocks_recopila_recopila.php_id=4057&dopt=1.html';
+    }
+
+    // extraer a PDFRepository (Medium)
+    if (this.subject === 'desarrollo-web-en-entorno-cliente' ||
+        this.subject === 'desarrollo-web-en-entorno-servidor' ||
+        this.subject === 'diseno-de-interfaces-web') {
+
+      return 'DWEC/1. Arquitecturas_y_lenguajes_de_programación_en_clientes_web_JavaScript.pdf';
+    }
+
     const LMUrls: { [key: string]: string } = {
       '1': 'ut1/LM01.html',
       '2': 'ut2/LM02.html',
@@ -47,6 +59,22 @@ export class SourceIframeMaker {
     if (this.subject === 'lenguajes-de-marcas' && LMUrls[this.unit]) {
       return `https://gutifer666.github.io/daw-chat/lenguajes-de-marcas/${LMUrls[this.unit]}`;
     }
+
+    const FOLUrls: { [key: string]: string } = {
+      '1': 'ut1/la-relacion-laboral-individual.html',
+      '2': 'ut2/la-relacion-colectiva-en-el-trabajo.html',
+      '3': 'ut3/la-relacion-colectiva-en-el-trabajo.html',
+      '4': 'ut4/FOL04.html',
+      '5': 'ut5/plan-de-prevencion-de-la-empresa.html',
+      '6': 'ut6/medidas-de-prevención-y-proteccion.html',
+      '7': 'ut7/recopila.html',
+      '8': 'ut8/FOL08.html',
+    };
+
+    if (this.subject === 'formacion-y-orientacion-laboral' && FOLUrls[this.unit]) {
+      return `https://gutifer666.github.io/daw-chat/formacion-y-orientacion-laboral/${FOLUrls[this.unit]}`;
+    }
+
 
     return `https://gutifer666.github.io/daw-chat/${(this.subject)}/ut${this.unit}/recopila.html`;
 
