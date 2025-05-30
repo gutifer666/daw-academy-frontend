@@ -7,12 +7,8 @@ import { ContentMakerUseCase } from './application/content-maker/content-maker.u
 import { ContentMakerCommand } from './application/content-maker/content-maker.command';
 import { ContentMakerResult } from './application/content-maker/content-maker.result';
 
-// Domain layer imports
-import { ContentMakerService } from './domain/content-maker.service';
-
-// Infrastructure layer imports
-import { HttpContentRepository } from './infrastructure/repositories/http-content.repository';
-import { UrlSanitizerService } from './infrastructure/services/url-sanitizer.service';
+// Factory service import
+import { ContentMakerFactory } from './content-maker-factory.service';
 
 /**
  * Angular component for content creation using hexagonal architecture
@@ -33,18 +29,10 @@ export class ContentMakerComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private urlSanitizerService: UrlSanitizerService
+    private contentMakerFactory: ContentMakerFactory
   ) {
-    // Dependency injection and composition root
-    // This is where we wire up our hexagonal architecture layers
-    const contentRepository = new HttpContentRepository();
-    const contentMakerService = new ContentMakerService(contentRepository);
-    const sanitizerFunction = this.urlSanitizerService.createSanitizerFunction();
-    
-    this.contentMakerUseCase = new ContentMakerUseCase(
-      contentMakerService,
-      sanitizerFunction
-    );
+    // Use factory to create the use case with proper dependency injection
+    this.contentMakerUseCase = this.contentMakerFactory.createWithHttpRepository();
   }
 
   async ngOnInit(): Promise<void> {
