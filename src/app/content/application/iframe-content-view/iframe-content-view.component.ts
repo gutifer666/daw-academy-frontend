@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { SourceIframeMaker } from '../../domain/source-iframe-maker';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-iframe-content-view',
@@ -13,15 +13,23 @@ export class IframeContentViewComponent {
 
   constructor(
     private sanitizer: DomSanitizer,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    const path = this.route.snapshot.routeConfig?.path;
+    // Obtener la ruta completa en lugar de solo el segmento final
+    const currentUrl = this.router.url;
+    // Eliminar la barra inicial para obtener el formato correcto (ej: "programacion/ut1")
+    const path = currentUrl.startsWith('/') ? currentUrl.substring(1) : currentUrl;
 
     if (path) {
-      const url = SourceIframeMaker.source(path);
-      this.source = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+      try {
+        const url = SourceIframeMaker.source(path);
+        this.source = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+      } catch (error) {
+        console.error('Error al cargar el contenido:', error);
+      }
     }
   }
 }

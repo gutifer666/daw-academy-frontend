@@ -1,115 +1,58 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './section/home/home.component';
-import {IframeContentViewComponent} from './content/application/iframe-content-view/iframe-content-view.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'programacion', component: HomeComponent },
-  { path: 'programacion/ut1', component: IframeContentViewComponent },
-  { path: 'programacion/ut2', component: IframeContentViewComponent },
-  { path: 'programacion/ut3', component: IframeContentViewComponent },
-  { path: 'programacion/ut4', component: IframeContentViewComponent },
-  { path: 'programacion/ut5', component: IframeContentViewComponent },
-  { path: 'programacion/ut6', component: IframeContentViewComponent },
-  { path: 'programacion/ut7', component: IframeContentViewComponent },
-  { path: 'programacion/ut8', component: IframeContentViewComponent },
-  { path: 'programacion/ut9', component: IframeContentViewComponent },
-  { path: 'programacion/ut10', component: IframeContentViewComponent },
-
-  { path: 'sistemas-informaticos', component: HomeComponent},
-  { path: 'sistemas-informaticos/ut1', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut2', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut3', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut4', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut5', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut6', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut7', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut8', component: IframeContentViewComponent },
-  { path: 'sistemas-informaticos/ut9', component: IframeContentViewComponent },
-
-  { path: 'bases-de-datos', component: HomeComponent},
-  { path: 'bases-de-datos/ut1', component: IframeContentViewComponent },
-  { path: 'bases-de-datos/ut2', component: IframeContentViewComponent },
-  { path: 'bases-de-datos/ut3', component: IframeContentViewComponent },
-  { path: 'bases-de-datos/ut4', component: IframeContentViewComponent },
-  { path: 'bases-de-datos/ut5', component: IframeContentViewComponent },
-  { path: 'bases-de-datos/ut6', component: IframeContentViewComponent },
-  { path: 'bases-de-datos/ut7', component: IframeContentViewComponent },
-
-  { path: 'lenguajes-de-marcas', component: HomeComponent},
-  { path: 'lenguajes-de-marcas/ut1', component: IframeContentViewComponent },
-  { path: 'lenguajes-de-marcas/ut2', component: IframeContentViewComponent },
-  { path: 'lenguajes-de-marcas/ut3', component: IframeContentViewComponent },
-  { path: 'lenguajes-de-marcas/ut4', component: IframeContentViewComponent },
-  { path: 'lenguajes-de-marcas/ut5', component: IframeContentViewComponent },
-  { path: 'lenguajes-de-marcas/ut6', component: IframeContentViewComponent },
-
-  { path: 'entornos-de-desarrollo', component: HomeComponent},
-  { path: 'entornos-de-desarrollo/ut1', component: IframeContentViewComponent },
-  { path: 'entornos-de-desarrollo/ut2', component: IframeContentViewComponent },
-  { path: 'entornos-de-desarrollo/ut3', component: IframeContentViewComponent },
-  { path: 'entornos-de-desarrollo/ut4', component: IframeContentViewComponent },
-  { path: 'entornos-de-desarrollo/ut5', component: IframeContentViewComponent },
-
-  { path: 'formacion-y-orientacion-laboral', component: HomeComponent},
-  { path: 'formacion-y-orientacion-laboral/ut1', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut2', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut3', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut4', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut5', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut6', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut7', component: IframeContentViewComponent },
-  { path: 'formacion-y-orientacion-laboral/ut8', component: IframeContentViewComponent },
-
-  { path: 'desarrollo-web-en-entorno-cliente', component: HomeComponent},
-  { path: 'desarrollo-web-en-entorno-cliente/ut1', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-cliente/ut2', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-cliente/ut3', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-cliente/ut4', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-cliente/ut5', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-cliente/ut6', component: IframeContentViewComponent },
-
-  { path: 'desarrollo-web-en-entorno-servidor', component: HomeComponent},
-  { path: 'desarrollo-web-en-entorno-servidor/ut1', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-servidor/ut2', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-servidor/ut3', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-servidor/ut4', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-servidor/ut5', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-servidor/ut6', component: IframeContentViewComponent },
-  { path: 'desarrollo-web-en-entorno-servidor/ut7', component: IframeContentViewComponent },
-
-  { path: 'despliegue-de-aplicaciones', component: HomeComponent},
-  { path: 'despliegue-de-aplicaciones/ut1', component: IframeContentViewComponent },
-  { path: 'despliegue-de-aplicaciones/ut2', component: IframeContentViewComponent },
-  { path: 'despliegue-de-aplicaciones/ut3', component: IframeContentViewComponent },
-  { path: 'despliegue-de-aplicaciones/ut4', component: IframeContentViewComponent },
-  { path: 'despliegue-de-aplicaciones/ut5', component: IframeContentViewComponent },
-
-  { path: 'diseno-de-interfaces-web', component: HomeComponent},
-  { path: 'diseno-de-interfaces-web/ut1', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut2', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut3', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut4', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut5', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut6', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut7', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut8', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut9', component: IframeContentViewComponent },
-  { path: 'diseno-de-interfaces-web/ut10', component: IframeContentViewComponent },
-
-  { path: 'empresa-e-iniciativa-emprendedora', component: HomeComponent},
-  { path: 'empresa-e-iniciativa-emprendedora/ut1', component: IframeContentViewComponent },
-  { path: 'empresa-e-iniciativa-emprendedora/ut2', component: IframeContentViewComponent },
-  { path: 'empresa-e-iniciativa-emprendedora/ut3', component: IframeContentViewComponent },
-  { path: 'empresa-e-iniciativa-emprendedora/ut4', component: IframeContentViewComponent },
-  { path: 'empresa-e-iniciativa-emprendedora/ut5', component: IframeContentViewComponent },
-  { path: 'empresa-e-iniciativa-emprendedora/ut6', component: IframeContentViewComponent },
-  { path: 'empresa-e-iniciativa-emprendedora/ut7', component: IframeContentViewComponent },
-
-  { path: 'proyecto-daw', component: HomeComponent},
-  { path: 'proyecto-daw/ut1', component: IframeContentViewComponent },
-
-  { path: 'formacion-en-centros-de-trabajo', component: HomeComponent},
-  { path: 'formacion-en-centros-de-trabajo/ut1', component: IframeContentViewComponent }
-
+  {
+    path: 'programacion',
+    loadChildren: () => import('./content/infrastructure/routes/programacion.routes').then(m => m.PROGRAMACION_ROUTES)
+  },
+  {
+    path: 'sistemas-informaticos',
+    loadChildren: () => import('./content/infrastructure/routes/sistemas-informaticos.routes').then(m => m.SISTEMAS_INFORMATICOS_ROUTES)
+  },
+  {
+    path: 'bases-de-datos',
+    loadChildren: () => import('./content/infrastructure/routes/bases-de-datos.routes').then(m => m.BASES_DE_DATOS_ROUTES)
+  },
+  {
+    path: 'lenguajes-de-marcas',
+    loadChildren: () => import('./content/infrastructure/routes/lenguajes-de-marcas.routes').then(m => m.LENGUAJES_DE_MARCAS_ROUTES)
+  },
+  {
+    path: 'entornos-de-desarrollo',
+    loadChildren: () => import('./content/infrastructure/routes/entornos-de-desarrollo.routes').then(m => m.ENTORNOS_DE_DESARROLLO_ROUTES)
+  },
+  {
+    path: 'formacion-y-orientacion-laboral',
+    loadChildren: () => import('./content/infrastructure/routes/formacion-y-orientacion-laboral.routes').then(m => m.FORMACION_Y_ORIENTACION_LABORAL_ROUTES)
+  },
+  {
+    path: 'desarrollo-web-en-entorno-cliente',
+    loadChildren: () => import('./content/infrastructure/routes/desarrollo-web-en-entorno-cliente.routes').then(m => m.DESARROLLO_WEB_EN_ENTORNO_CLIENTE_ROUTES)
+  },
+  {
+    path: 'desarrollo-web-en-entorno-servidor',
+    loadChildren: () => import('./content/infrastructure/routes/desarrollo-web-en-entorno-servidor.routes').then(m => m.DESARROLLO_WEB_EN_ENTORNO_SERVIDOR_ROUTES)
+  },
+  {
+    path: 'despliegue-de-aplicaciones',
+    loadChildren: () => import('./content/infrastructure/routes/despliegue-de-aplicaciones.routes').then(m => m.DESPLIEGUE_DE_APLICACIONES_ROUTES)
+  },
+  {
+    path: 'diseno-de-interfaces-web',
+    loadChildren: () => import('./content/infrastructure/routes/diseno-de-interfaces-web.routes').then(m => m.DISENO_DE_INTERFACES_WEB_ROUTES)
+  },
+  {
+    path: 'empresa-e-iniciativa-emprendedora',
+    loadChildren: () => import('./content/infrastructure/routes/empresa-e-iniciativa-emprendedora.routes').then(m => m.EMPRESA_E_INICIATIVA_EMPRENDEDORA_ROUTES)
+  },
+  {
+    path: 'proyecto-daw',
+    loadChildren: () => import('./content/infrastructure/routes/proyecto-daw.routes').then(m => m.PROYECTO_DAW_ROUTES)
+  },
+  {
+    path: 'formacion-en-centros-de-trabajo',
+    loadChildren: () => import('./content/infrastructure/routes/formacion-en-centros-de-trabajo.routes').then(m => m.FORMACION_EN_CENTROS_DE_TRABAJO_ROUTES)
+  }
 ];
