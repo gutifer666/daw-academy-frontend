@@ -17,8 +17,8 @@ export class IframeContentViewComponent {
   ) {}
 
   ngOnInit() {
-    // Obtiene la ruta completa, por ejemplo: 'programacion/ut1'
     const path = this.route.snapshot.routeConfig?.path;
+
     if (path) {
       const url = SourceIframeMaker.source(path);
       this.source = this.sanitizer.bypassSecurityTrustResourceUrl(url);
