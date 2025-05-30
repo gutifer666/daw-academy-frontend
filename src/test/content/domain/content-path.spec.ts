@@ -1,4 +1,4 @@
-import { ContentPath } from '../../../app/content/domain/content-path';
+import { ContentPath } from '../../../app/content/domain';
 
 describe('ContentPath', () => {
   describe('constructor', () => {

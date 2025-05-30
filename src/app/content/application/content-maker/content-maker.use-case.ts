@@ -1,4 +1,4 @@
-import { ContentMakerService } from '../../domain/content-maker.service';
+import { ContentMakerService } from '../../domain';
 import { ContentMakerCommand } from './content-maker.command';
 import { ContentMakerResult } from './content-maker.result';
 
@@ -21,7 +21,7 @@ export class ContentMakerUseCase {
     try {
       // Use the domain service to create the content source
       const contentSource = await this.contentMakerService.createContentSource(command.path);
-      
+
       // Get the URL from the content source
       const sourceUrl = contentSource.url;
 
