@@ -4,12 +4,12 @@ import { SafeResourceUrl } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 // Application layer imports
-import { ContentMakerUseCase } from './application/content-maker/content-maker.use-case';
-import { ContentMakerCommand } from './application/content-maker/content-maker.command';
-import { ContentMakerResult } from './application/content-maker/content-maker.result';
+import { ContentMakerUseCase } from '../../content/application/content-maker/content-maker.use-case';
+import { ContentMakerCommand } from '../../content/application/content-maker/content-maker.command';
+import { ContentMakerResult } from '../../content/application/content-maker/content-maker.result';
 
 // Factory service import
-import { ContentMakerFactory } from './content-maker-factory.service';
+import { ContentMakerFactory } from '../../content/content-maker-factory.service';
 
 /**
  * Angular component for content creation using hexagonal architecture
