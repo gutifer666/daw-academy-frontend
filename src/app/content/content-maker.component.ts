@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SafeResourceUrl } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 // Application layer imports
 import { ContentMakerUseCase } from './application/content-maker/content-maker.use-case';
@@ -16,6 +17,8 @@ import { ContentMakerFactory } from './content-maker-factory.service';
  */
 @Component({
   selector: 'app-content-maker',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './content-maker.component.html',
   styleUrl: './content-maker.component.css'
 })
