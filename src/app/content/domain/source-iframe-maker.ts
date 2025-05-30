@@ -9,7 +9,6 @@ export class SourceIframeMaker {
         this.guard(path);
         this.splitPath(path);
 
-        // El 10 no lo resolvemos.
         return this.resolveSource();
 
     }
@@ -26,6 +25,10 @@ export class SourceIframeMaker {
 
         if (this.subject === 'despliegue-de-aplicaciones' && this.unit === '5') {
             return 'https://gutifer666.github.io/daw-chat/despliegue-de-aplicaciones/ut5/educacionadistancia.juntadeandalucia.es_formacionprofesional_blocks_recopila_recopila.php_id=4057&dopt=1.html';
+        }
+
+        if (this.subject === 'programacion' && this.unit === '10') {
+            return 'https://gutifer666.github.io/daw-chat/programacion/ut10/educacionadistancia.juntadeandalucia.es_formacionprofesional_blocks_recopila_recopila.php_id=4052&dopt=1.html';
         }
 
         // extraer a PDFRepository (Medium)
