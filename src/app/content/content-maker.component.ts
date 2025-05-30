@@ -1,0 +1,97 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SafeResourceUrl } from '@angular/platform-browser';
+
+// Application layer imports
+import { ContentMakerUseCase } from './application/content-maker/content-maker.use-case';
+import { ContentMakerCommand } from './application/content-maker/content-maker.command';
+import { ContentMakerResult } from './application/content-maker/content-maker.result';
+
+// Domain layer imports
+import { ContentMakerService } from './domain/content-maker.service';
+
+// Infrastructure layer imports
+import { HttpContentRepository } from './infrastructure/repositories/http-content.repository';
+import { UrlSanitizerService } from './infrastructure/services/url-sanitizer.service';
+
+/**
+ * Angular component for content creation using hexagonal architecture
+ * This is the only layer where Angular-specific code is allowed
+ */
+@Component({
+  selector: 'app-content-maker',
+  templateUrl: './content-maker.component.html',
+  styleUrl: './content-maker.component.css'
+})
+export class ContentMakerComponent implements OnInit {
+  public source: SafeResourceUrl | undefined;
+  public isLoading = false;
+  public errorMessage: string | undefined;
+
+  private contentMakerUseCase: ContentMakerUseCase;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private urlSanitizerService: UrlSanitizerService
+  ) {
+    // Dependency injection and composition root
+    // This is where we wire up our hexagonal architecture layers
+    const contentRepository = new HttpContentRepository();
+    const contentMakerService = new ContentMakerService(contentRepository);
+    const sanitizerFunction = this.urlSanitizerService.createSanitizerFunction();
+    
+    this.contentMakerUseCase = new ContentMakerUseCase(
+      contentMakerService,
+      sanitizerFunction
+    );
+  }
+
+  async ngOnInit(): Promise<void> {
+    await this.loadContent();
+  }
+
+  private async loadContent(): Promise<void> {
+    try {
+      this.isLoading = true;
+      this.errorMessage = undefined;
+
+      // Get the current URL path
+      const currentUrl = this.router.url;
+      const path = currentUrl.startsWith('/') ? currentUrl.substring(1) : currentUrl;
+
+      if (!path) {
+        this.errorMessage = 'No content path provided';
+        return;
+      }
+
+      // Create command and execute use case
+      const command = new ContentMakerCommand(path, true);
+      const result = await this.contentMakerUseCase.execute(command);
+
+      this.handleResult(result);
+    } catch (error) {
+      this.errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      console.error('Error loading content:', error);
+    } finally {
+      this.isLoading = false;
+    }
+  }
+
+  private handleResult(result: ContentMakerResult): void {
+    if (result.isSuccess) {
+      this.source = result.sanitizedUrl;
+      this.errorMessage = undefined;
+    } else {
+      this.errorMessage = result.errorMessage || 'Failed to load content';
+      this.source = undefined;
+    }
+  }
+
+  /**
+   * Public method to reload content (useful for error recovery)
+   */
+  async reloadContent(): Promise<void> {
+    await this.loadContent();
+  }
+}
