@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from '../../../section/home/home.component';
-import { IframeContentViewComponent } from '../../application/iframe-content-view/iframe-content-view.component';
+import {ContentMakerComponent} from '../../content-maker.component';
 
 export const SISTEMAS_INFORMATICOS_ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'ut1', component: IframeContentViewComponent },
-  { path: 'ut2', component: IframeContentViewComponent },
-  { path: 'ut3', component: IframeContentViewComponent },
-  { path: 'ut4', component: IframeContentViewComponent },
-  { path: 'ut5', component: IframeContentViewComponent },
-  { path: 'ut6', component: IframeContentViewComponent },
-  { path: 'ut7', component: IframeContentViewComponent },
-  { path: 'ut8', component: IframeContentViewComponent },
-  { path: 'ut9', component: IframeContentViewComponent },
+  { path: 'ut1', component: ContentMakerComponent },
+  { path: 'ut2', component: ContentMakerComponent },
+  { path: 'ut3', component: ContentMakerComponent },
+  { path: 'ut4', component: ContentMakerComponent },
+  { path: 'ut5', component: ContentMakerComponent },
+  { path: 'ut6', component: ContentMakerComponent },
+  { path: 'ut7', component: ContentMakerComponent },
+  { path: 'ut8', component: ContentMakerComponent },
+  { path: 'ut9', component: ContentMakerComponent },
 ];
