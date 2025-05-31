@@ -98,8 +98,7 @@ describe('ContentMakerCommand', () => {
           fail('Expected constructor to throw an error');
         } catch (error) {
           expect(error).toBeInstanceOf(Error);
-          expect(error.message).toBe('Content path is required');
-        }
+          expect((error as Error).message).toBe('Content path is required');        }
       });
 
       it('should throw error when path contains only tabs and spaces', () => {
