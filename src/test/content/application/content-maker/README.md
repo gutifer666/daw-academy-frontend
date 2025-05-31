@@ -23,10 +23,11 @@ src/test/content/application/content-maker/
 - ✅ Explicit sanitize parameter values (true/false)
 - ✅ Complex paths with special characters
 - ✅ Invalid parameter validation (empty, null, undefined)
-- ✅ Edge cases (whitespace, single characters)
-- ✅ Immutability verification
+- ✅ Edge cases (whitespace, single characters, tabs/newlines)
+- ✅ Error instance verification and message validation
+- ✅ Property accessibility and type verification
 
-**Test Count:** 12 tests
+**Test Count:** 15 tests
 
 ### ContentMakerResult Tests (`content-maker.result.spec.ts`)
 
