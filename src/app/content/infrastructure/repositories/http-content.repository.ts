@@ -1,7 +1,7 @@
-import { ContentRepository } from '../../domain/content-repository.interface';
-import { ContentPath } from '../../domain/content-path';
-import { ContentSource } from '../../domain/content-source';
-import { SIUrls, LMUrls, FOLUrls } from '../../domain/paths';
+import { ContentRepository } from '../../domain';
+import { ContentPath } from '../../domain';
+import { ContentSource } from '../../domain';
+import { SIUrls, LMUrls, FOLUrls } from '../../domain';
 
 /**
  * HTTP-based implementation of ContentRepository

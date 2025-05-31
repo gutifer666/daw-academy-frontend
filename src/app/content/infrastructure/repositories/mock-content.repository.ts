@@ -1,6 +1,6 @@
-import { ContentRepository } from '../../domain/content-repository.interface';
-import { ContentPath } from '../../domain/content-path';
-import { ContentSource } from '../../domain/content-source';
+import { ContentRepository } from '../../domain';
+import { ContentPath } from '../../domain';
+import { ContentSource } from '../../domain';
 
 /**
  * Mock implementation of ContentRepository for testing and development
@@ -17,11 +17,11 @@ export class MockContentRepository implements ContentRepository {
   async resolveContentSource(contentPath: ContentPath): Promise<ContentSource> {
     const key = `${contentPath.subject}/${contentPath.unit}`;
     const url = this.mockData.get(key);
-    
+
     if (!url) {
       throw new Error(`Mock content not found for path: ${contentPath.originalPath}`);
     }
-    
+
     return new ContentSource(url);
   }
 

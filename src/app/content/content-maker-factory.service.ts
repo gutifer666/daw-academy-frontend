@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { ContentMakerUseCase } from './application/content-maker/content-maker.use-case';
-import { ContentMakerService } from './domain/content-maker.service';
-import { ContentRepository } from './domain/content-repository.interface';
-import { HttpContentRepository } from './infrastructure/repositories/http-content.repository';
-import { MockContentRepository } from './infrastructure/repositories/mock-content.repository';
-import { UrlSanitizerService } from './infrastructure/services/url-sanitizer.service';
+import { ContentMakerUseCase } from './application/content-maker';
+import { ContentMakerService } from './domain';
+import { ContentRepository } from './domain';
+import { HttpContentRepository, MockContentRepository } from './infrastructure';
+import { UrlSanitizerService } from './infrastructure';
 
 /**
  * Factory service for creating ContentMakerUseCase instances
@@ -24,7 +23,7 @@ export class ContentMakerFactory {
     const repository: ContentRepository = new HttpContentRepository();
     const service = new ContentMakerService(repository);
     const sanitizer = this.urlSanitizerService.createSanitizerFunction();
-    
+
     return new ContentMakerUseCase(service, sanitizer);
   }
 
@@ -35,7 +34,7 @@ export class ContentMakerFactory {
     const repository: ContentRepository = new MockContentRepository();
     const service = new ContentMakerService(repository);
     const sanitizer = this.urlSanitizerService.createSanitizerFunction();
-    
+
     return new ContentMakerUseCase(service, sanitizer);
   }
 
@@ -45,7 +44,7 @@ export class ContentMakerFactory {
   createWithCustomRepository(repository: ContentRepository): ContentMakerUseCase {
     const service = new ContentMakerService(repository);
     const sanitizer = this.urlSanitizerService.createSanitizerFunction();
-    
+
     return new ContentMakerUseCase(service, sanitizer);
   }
 
@@ -55,7 +54,7 @@ export class ContentMakerFactory {
   createWithoutSanitization(): ContentMakerUseCase {
     const repository: ContentRepository = new HttpContentRepository();
     const service = new ContentMakerService(repository);
-    
+
     return new ContentMakerUseCase(service);
   }
 }
