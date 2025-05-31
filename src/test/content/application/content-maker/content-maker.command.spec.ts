@@ -1,4 +1,4 @@
-import { ContentMakerCommand } from '../../../../app/content/application/content-maker/content-maker.command';
+import { ContentMakerCommand } from '../../../../app/content/application/content-maker';
 
 describe('ContentMakerCommand', () => {
   describe('constructor', () => {
